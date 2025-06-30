@@ -10,5 +10,5 @@ author:
   url: "https://userbird.com"
 
 versions:
-  - sha: b066797f8186eb2c3e6c6e62da9cd7aa6d6fb11a
+  - sha: 568829edde3dcd47a3be5de291a2a0bbd7f61db0
     changeNotes: Initial release.
