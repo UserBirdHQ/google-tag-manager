@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+﻿﻿___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -56,9 +56,9 @@ const copyFromWindow = require('copyFromWindow');
 const scriptUrl = 'https://cdn.userbird.com/analytics.min.js';
 
 // Check permission to set data-site (as shown in your permissions)
-if (queryPermission('access_globals', 'readwrite', '__USERBIRD_CONFIG__')) {
+if (queryPermission('access_globals', 'readwrite', '__userbirdConfigStaging')) {
   // Set the data-site as a global variable
-  setInWindow('__USERBIRD_CONFIG__', data.siteId, true);
+  setInWindow('__userbirdConfigStaging', data.siteId, true);
   log('Set data-site to: ' + data.siteId);
  
   if (queryPermission('inject_script', scriptUrl)) {
@@ -78,8 +78,8 @@ function onSuccess() {
   log('Glass Analytics: Script loaded successfully');
   
   // Verify the variable was set correctly
-  if (queryPermission('access_globals', 'read', '__USERBIRD_CONFIG__')) {
-    const currentSiteId = copyFromWindow('__USERBIRD_CONFIG__');
+  if (queryPermission('access_globals', 'read', '__userbirdConfigStaging')) {
+    const currentSiteId = copyFromWindow('__userbirdConfigStaging');
     log('Current data-site after script load: ' + currentSiteId);
   }
   
@@ -177,7 +177,7 @@ ___WEB_PERMISSIONS___
                 "mapValue": [
                   {
                     "type": 1,
-                    "string": "__USERBIRD_CONFIG__"
+                    "string": "__userbirdConfigStaging"
                   },
                   {
                     "type": 8,
@@ -213,6 +213,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 30/06/2025, 16:03:13
+Created on 02/07/2025, 16:31:52
 
 
