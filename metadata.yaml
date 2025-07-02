@@ -10,5 +10,7 @@ author:
   url: "https://userbird.com"
 
 versions:
+  - sha: a74e548222b734fd06d27ed162703124176c3e19
+    changeNotes: Production Stable Release pointing at Userbird Prod CDN.
   - sha: 568829edde3dcd47a3be5de291a2a0bbd7f61db0
     changeNotes: Initial release.
